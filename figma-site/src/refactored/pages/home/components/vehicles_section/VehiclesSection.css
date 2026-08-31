@@ -1,0 +1,92 @@
+.vehicles-section {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-block: 80px 96px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Inner container: site content cap plus the shared wide gutter. */
+.vehicles-section .vehicles-section__container {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+}
+
+.vehicles-section .vehicles-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.vehicles-section .vehicles-section__eyebrow {
+  margin: 0;
+  color: rgb(0, 178, 0);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.vehicles-section .vehicles-section__heading {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 56px;
+}
+
+/* Component-local product grid width: visually narrower than the site
+   container and centred inside it. Not a second site-wide container. */
+.vehicles-section .vehicles-section__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 848px;
+  margin: 64px auto 0;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+}
+
+.vehicles-section .vehicles-section__item {
+  display: flex;
+  min-width: 0;
+}
+
+@media (max-width: 1120px) {
+  .vehicles-section {
+    padding-block: 77px 56px;
+  }
+
+  .vehicles-section .vehicles-section__container {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+  }
+
+  .vehicles-section .vehicles-section__header {
+    gap: 2px;
+  }
+
+  .vehicles-section .vehicles-section__eyebrow {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .vehicles-section .vehicles-section__heading {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 42px;
+  }
+
+  /* Single column with natural row height on narrow. */
+  .vehicles-section .vehicles-section__list {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: none;
+    margin-top: 40px;
+    gap: 8px;
+  }
+}

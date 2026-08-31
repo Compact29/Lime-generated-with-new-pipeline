@@ -1,0 +1,132 @@
+/* Full-bleed white cities section; width limiting and gutters belong to the
+   inner container. */
+.cities-section {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-block: 80px;
+  background-color: rgb(255, 255, 255);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+}
+
+.cities-section .cities-section__container {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+}
+
+.cities-section .cities-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.cities-section .cities-section__eyebrow {
+  margin: 0;
+  color: rgb(0, 178, 0);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.cities-section .cities-section__heading {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 56px;
+}
+
+/* Section-local carousel viewport: it spans the full section width and clips
+   the track, so the intentional cropped preview never reaches the page. */
+.cities-section .cities-section__carousel {
+  margin-top: 64px;
+  overflow: hidden;
+}
+
+.cities-section .cities-section__track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cities-section .cities-section__slide {
+  display: flex;
+  flex: 0 0 auto;
+  width: calc(
+    0.4 *
+      min(
+        100% - 2 * var(--site-gutter-wide, 32px),
+        var(--site-content-max, 1280px)
+      )
+  );
+  min-width: 0;
+}
+
+/* The leading slide starts on the site container line; every following slide
+   keeps the same pitch and runs past the right viewport edge. */
+.cities-section .cities-section__slide:first-child {
+  margin-inline-start: max(
+    var(--site-gutter-wide, 32px),
+    (100% - var(--site-content-max, 1280px)) / 2
+  );
+}
+
+.cities-section .cities-section__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+}
+
+@media (max-width: 1120px) {
+  .cities-section {
+    padding-block: 45px 48px;
+  }
+
+  .cities-section .cities-section__container {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+  }
+
+  .cities-section .cities-section__header {
+    gap: 2px;
+  }
+
+  .cities-section .cities-section__eyebrow {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .cities-section .cities-section__heading {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 42px;
+  }
+
+  .cities-section .cities-section__carousel {
+    margin-top: 40px;
+  }
+
+  /* One nearly full card per viewport plus the visible edge of the next one. */
+  .cities-section .cities-section__slide {
+    width: min(
+      100% - 2 * var(--site-gutter-narrow, 24px),
+      var(--site-content-max, 1280px)
+    );
+  }
+
+  .cities-section .cities-section__slide:first-child {
+    margin-inline-start: max(
+      var(--site-gutter-narrow, 24px),
+      (100% - var(--site-content-max, 1280px)) / 2
+    );
+  }
+
+  .cities-section .cities-section__pagination {
+    margin-top: 34px;
+  }
+}

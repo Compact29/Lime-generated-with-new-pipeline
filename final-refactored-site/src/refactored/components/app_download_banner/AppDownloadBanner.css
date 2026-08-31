@@ -1,0 +1,89 @@
+.app-download-banner {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  color: rgb(255, 255, 255);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+}
+
+.app-download-banner .app-download-banner__inner {
+  box-sizing: border-box;
+  display: grid;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+  padding-block: 96px;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: minmax(0, 450px) minmax(0, 522px);
+  gap: 48px 64px;
+}
+
+.app-download-banner .app-download-banner__illustration {
+  margin: 0;
+  min-width: 0;
+}
+
+.app-download-banner .app-download-banner__picture {
+  display: block;
+}
+
+.app-download-banner .app-download-banner__image {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin-inline: auto;
+  aspect-ratio: 920 / 1584;
+  object-fit: contain;
+}
+
+.app-download-banner .app-download-banner__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.app-download-banner .app-download-banner__heading {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 56px;
+  color: rgb(255, 255, 255);
+}
+
+.app-download-banner .app-download-banner__badges {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.app-download-banner .app-download-banner__badge {
+  display: inline-flex;
+}
+
+@media (max-width: 1120px) {
+  .app-download-banner .app-download-banner__inner {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+    padding-block: 112px 96px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .app-download-banner .app-download-banner__image {
+    max-width: 454px;
+  }
+
+  .app-download-banner .app-download-banner__heading {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 42px;
+  }
+}

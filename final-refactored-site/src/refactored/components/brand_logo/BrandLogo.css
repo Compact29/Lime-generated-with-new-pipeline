@@ -1,0 +1,33 @@
+.brand-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.brand-logo--inverse {
+  width: 112px;
+}
+
+.brand-logo--brand {
+  width: 160px;
+}
+
+.brand-logo .brand-logo__picture,
+.brand-logo .brand-logo__image {
+  display: block;
+  width: 100%;
+}
+
+.brand-logo .brand-logo__image {
+  height: auto;
+}
+
+@media (max-width: 1120px) {
+  .brand-logo--inverse {
+    width: 88px;
+  }
+
+  .brand-logo--brand {
+    width: 96px;
+  }
+}

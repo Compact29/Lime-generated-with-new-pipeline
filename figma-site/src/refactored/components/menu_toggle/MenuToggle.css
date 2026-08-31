@@ -1,0 +1,29 @@
+.menu-toggle {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 24px;
+  height: 20px;
+  margin: 0;
+  padding: 0 1px;
+  border: 0;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.menu-toggle .menu-toggle__line {
+  display: block;
+  width: 22px;
+  height: 3px;
+  flex: 0 0 3px;
+  background: currentColor;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}

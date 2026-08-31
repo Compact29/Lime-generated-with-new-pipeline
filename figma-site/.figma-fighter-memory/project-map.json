@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-17T16:53:33.111Z",
+  "project": {
+    "id": "20260812-174847-figma-site-6b37e22e",
+    "name": "figma-site",
+    "root": "."
+  },
+  "pages": [
+    {
+      "key": "page-1",
+      "name": "Home",
+      "routePath": "/page-1",
+      "componentDir": "Home",
+      "sourceRoot": "src/generated/Home",
+      "sourceFiles": [
+        "src/generated/Home/GeneratedScene_1.jsx",
+        "src/generated/Home/generated_1.css"
+      ],
+      "uiUxKits": [],
+      "references": {
+        "desktop": "design-reference/desktop.png",
+        "mobile": "design-reference/mobile.png"
+      }
+    }
+  ],
+  "sharedFiles": [
+    "src/App.jsx",
+    "src/styles.css",
+    "src/fonts.css",
+    "src/generated/pages.js",
+    "src/cms/cmsClient.js"
+  ],
+  "cms": {
+    "schemaPath": "cms/schema.json",
+    "databasePath": "cms/db.json",
+    "forms": [
+      {
+        "id": "contact_requests",
+        "label": "Contact requests",
+        "fields": [
+          {
+            "name": "name",
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "label": "Email",
+            "type": "email"
+          },
+          {
+            "name": "message",
+            "label": "Message",
+            "type": "textarea"
+          },
+          {
+            "name": "source",
+            "label": "Source",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

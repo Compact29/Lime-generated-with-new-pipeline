@@ -1,0 +1,1662 @@
+{
+  "manifest_version": "1.0",
+  "refactored_root": "src/refactored",
+  "coordinate_system": {
+    "unit": "normalized",
+    "origin": "top_left",
+    "format": "[x, y, width, height]",
+    "precision": 4
+  },
+  "site": {
+    "reference_viewports": {
+      "desktop": {
+        "category": "desktop",
+        "width": 1440
+      },
+      "mobile": {
+        "category": "mobile",
+        "width": 550
+      }
+    },
+    "pages": {
+      "home": {
+        "name": "Lime Home",
+        "screenshots": {
+          "desktop": {
+            "file": "screenshot1.png",
+            "width": 1440,
+            "height": 6525
+          },
+          "mobile": {
+            "file": "screenshot_2.png",
+            "width": 550,
+            "height": 7615
+          }
+        }
+      }
+    }
+  },
+  "primitives": {
+    "app_store_badge": {
+      "description": "Branded marketplace badge linking to a mobile app download.",
+      "target": {
+        "module_path": "src/refactored/components/app_store_badge/AppStoreBadge.jsx",
+        "style_path": "src/refactored/components/app_store_badge/AppStoreBadge.css",
+        "export_name": "AppStoreBadge",
+        "export_type": "default"
+      },
+      "variants": {
+        "apple": {
+          "description": "Apple App Store download badge.",
+          "representative_occurrences": {
+            "desktop": "app_store_badge__apple__home__desktop__01",
+            "mobile": "app_store_badge__apple__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "app_store_badge__apple__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.5819, 0.823, 0.1042, 0.0078]
+            },
+            {
+              "id": "app_store_badge__apple__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.8676, 0.2727, 0.0066]
+            }
+          ]
+        },
+        "google": {
+          "description": "Google Play download badge.",
+          "representative_occurrences": {
+            "desktop": "app_store_badge__google__home__desktop__01",
+            "mobile": "app_store_badge__google__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "app_store_badge__google__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.6972, 0.823, 0.1181, 0.0078]
+            },
+            {
+              "id": "app_store_badge__google__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.3436, 0.8676, 0.3091, 0.0066]
+            }
+          ]
+        }
+      }
+    },
+    "brand_logo": {
+      "description": "Lime brand mark used for site identification.",
+      "target": {
+        "module_path": "src/refactored/components/brand_logo/BrandLogo.jsx",
+        "style_path": "src/refactored/components/brand_logo/BrandLogo.css",
+        "export_name": "BrandLogo",
+        "export_type": "default"
+      },
+      "variants": {
+        "inverse": {
+          "description": "Light brand mark for photographic or dark backgrounds.",
+          "representative_occurrences": {
+            "desktop": "brand_logo__inverse__home__desktop__01",
+            "mobile": "brand_logo__inverse__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "brand_logo__inverse__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0556, 0.0055, 0.0778, 0.0058]
+            },
+            {
+              "id": "brand_logo__inverse__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.0035, 0.16, 0.0039]
+            }
+          ]
+        },
+        "brand": {
+          "description": "Green brand mark for dark neutral backgrounds.",
+          "representative_occurrences": {
+            "desktop": "brand_logo__brand__home__desktop__01",
+            "mobile": "brand_logo__brand__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "brand_logo__brand__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0556, 0.9065, 0.1111, 0.0086]
+            },
+            {
+              "id": "brand_logo__brand__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.8953, 0.1455, 0.0043]
+            }
+          ]
+        }
+      }
+    },
+    "button": {
+      "description": "Prominent action control used for site navigation and calls to action.",
+      "target": {
+        "module_path": "src/refactored/components/button/Button.jsx",
+        "style_path": "src/refactored/components/button/Button.css",
+        "export_name": "Button",
+        "export_type": "default"
+      },
+      "variants": {
+        "primary": {
+          "description": "Filled high-emphasis action button.",
+          "representative_occurrences": {
+            "desktop": "button__primary__home__desktop__02",
+            "mobile": "button__primary__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "button__primary__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.8389, 0.0049, 0.1056, 0.0074]
+            },
+            {
+              "id": "button__primary__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.4806, 0.0785, 0.1243, 0.0074]
+            },
+            {
+              "id": "button__primary__home__desktop__03",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.4576, 0.7301, 0.0847, 0.0074]
+            },
+            {
+              "id": "button__primary__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.4582, 0.0345, 0.2909, 0.0054]
+            },
+            {
+              "id": "button__primary__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.4, 0.7216, 0.2, 0.0053]
+            }
+          ]
+        },
+        "outline": {
+          "description": "Transparent secondary action button with an outline.",
+          "representative_occurrences": {
+            "desktop": "button__outline__home__desktop__01",
+            "mobile": "button__outline__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "button__outline__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.3951, 0.0785, 0.0771, 0.0074]
+            },
+            {
+              "id": "button__outline__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.2564, 0.0345, 0.1855, 0.0054]
+            }
+          ]
+        }
+      }
+    },
+    "carousel_pagination": {
+      "description": "Dot indicator showing position within a horizontal carousel.",
+      "target": {
+        "module_path": "src/refactored/components/carousel_pagination/CarouselPagination.jsx",
+        "style_path": "src/refactored/components/carousel_pagination/CarouselPagination.css",
+        "export_name": "CarouselPagination",
+        "export_type": "default"
+      },
+      "variants": {
+        "extended": {
+          "description": "Pagination indicator for a long carousel sequence.",
+          "representative_occurrences": {
+            "desktop": "carousel_pagination__extended__home__desktop__01",
+            "mobile": "carousel_pagination__extended__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "carousel_pagination__extended__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.4201, 0.4667, 0.1597, 0.0015]
+            },
+            {
+              "id": "carousel_pagination__extended__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.2909, 0.5118, 0.4182, 0.0013]
+            }
+          ]
+        },
+        "compact": {
+          "description": "Pagination indicator for a short carousel sequence.",
+          "representative_occurrences": {
+            "desktop": "carousel_pagination__compact__home__desktop__01",
+            "mobile": "carousel_pagination__compact__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "carousel_pagination__compact__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.4736, 0.5893, 0.0528, 0.0015]
+            },
+            {
+              "id": "carousel_pagination__compact__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.4309, 0.5986, 0.1382, 0.0013]
+            }
+          ]
+        }
+      }
+    },
+    "language_selector": {
+      "description": "Compact locale selector showing the active language.",
+      "target": {
+        "module_path": "src/refactored/components/language_selector/LanguageSelector.jsx",
+        "style_path": "src/refactored/components/language_selector/LanguageSelector.css",
+        "export_name": "LanguageSelector",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Flag and language code selector.",
+          "representative_occurrences": {
+            "desktop": "language_selector__default__home__desktop__01",
+            "mobile": "language_selector__default__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "language_selector__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.1611, 0.0049, 0.0444, 0.0074]
+            },
+            {
+              "id": "language_selector__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.2327, 0.003, 0.1164, 0.005]
+            }
+          ]
+        }
+      }
+    },
+    "menu_toggle": {
+      "description": "Icon control that opens the compact site menu.",
+      "target": {
+        "module_path": "src/refactored/components/menu_toggle/MenuToggle.jsx",
+        "style_path": "src/refactored/components/menu_toggle/MenuToggle.css",
+        "export_name": "MenuToggle",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Collapsed menu trigger.",
+          "representative_occurrences": {
+            "mobile": "menu_toggle__default__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "menu_toggle__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.9, 0.0042, 0.0436, 0.0026]
+            }
+          ]
+        }
+      }
+    },
+    "social_link": {
+      "description": "Circular icon link to a social media channel.",
+      "target": {
+        "module_path": "src/refactored/components/social_link/SocialLink.jsx",
+        "style_path": "src/refactored/components/social_link/SocialLink.css",
+        "export_name": "SocialLink",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Standard footer social icon link.",
+          "representative_occurrences": {
+            "desktop": "social_link__default__home__desktop__01",
+            "mobile": "social_link__default__home__mobile__01"
+          },
+          "occurrences": [
+            {
+              "id": "social_link__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.8, 0.9407, 0.0222, 0.0049]
+            },
+            {
+              "id": "social_link__default__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.8306, 0.9407, 0.0222, 0.0049]
+            },
+            {
+              "id": "social_link__default__home__desktop__03",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.8611, 0.9407, 0.0222, 0.0049]
+            },
+            {
+              "id": "social_link__default__home__desktop__04",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.8917, 0.9407, 0.0222, 0.0049]
+            },
+            {
+              "id": "social_link__default__home__desktop__05",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.9222, 0.9407, 0.0222, 0.0049]
+            },
+            {
+              "id": "social_link__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.9624, 0.0582, 0.0042]
+            },
+            {
+              "id": "social_link__default__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.1236, 0.9624, 0.0582, 0.0042]
+            },
+            {
+              "id": "social_link__default__home__mobile__03",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.2036, 0.9624, 0.0582, 0.0042]
+            },
+            {
+              "id": "social_link__default__home__mobile__04",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.2836, 0.9624, 0.0582, 0.0042]
+            },
+            {
+              "id": "social_link__default__home__mobile__05",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.3636, 0.9624, 0.0582, 0.0042]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "shared_components": {
+    "app_download_banner": {
+      "description": "Reusable app download promotion with product imagery and store links.",
+      "target": {
+        "module_path": "src/refactored/components/app_download_banner/AppDownloadBanner.jsx",
+        "style_path": "src/refactored/components/app_download_banner/AppDownloadBanner.css",
+        "export_name": "AppDownloadBanner",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Product mockup paired with app marketplace badges.",
+          "representative_occurrences": {
+            "desktop": "app_download_banner__default__home__desktop__01",
+            "mobile": "app_download_banner__default__home__mobile__01"
+          },
+          "uses": [
+            {
+              "slot": "store_badges",
+              "kind": "primitive",
+              "component": "app_store_badge",
+              "variant": "apple",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "app_download_banner__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "app_store_badge__apple__home__desktop__01"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "app_download_banner__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "app_store_badge__apple__home__mobile__01"
+                  ]
+                }
+              ]
+            },
+            {
+              "slot": "store_badges",
+              "kind": "primitive",
+              "component": "app_store_badge",
+              "variant": "google",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "app_download_banner__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "app_store_badge__google__home__desktop__01"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "app_download_banner__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "app_store_badge__google__home__mobile__01"
+                  ]
+                }
+              ]
+            }
+          ],
+          "occurrences": [
+            {
+              "id": "app_download_banner__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0, 0.7461, 1, 0.148]
+            },
+            {
+              "id": "app_download_banner__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0, 0.7343, 1, 0.1526]
+            }
+          ]
+        }
+      }
+    },
+    "city_card": {
+      "description": "Destination card with city photography and a linked city name.",
+      "target": {
+        "module_path": "src/refactored/components/city_card/CityCard.jsx",
+        "style_path": "src/refactored/components/city_card/CityCard.css",
+        "export_name": "CityCard",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Standard city carousel card.",
+          "representative_occurrences": {
+            "desktop": "city_card__default__home__desktop__01",
+            "mobile": "city_card__default__home__mobile__01"
+          },
+          "uses": [],
+          "occurrences": [
+            {
+              "id": "city_card__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0639, 0.3923, 0.3389, 0.0682]
+            },
+            {
+              "id": "city_card__default__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.4194, 0.3923, 0.3389, 0.0682]
+            },
+            {
+              "id": "city_card__default__home__desktop__03",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.775, 0.3923, 0.225, 0.0682]
+            },
+            {
+              "id": "city_card__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0509, 0.4523, 0.8982, 0.0571]
+            },
+            {
+              "id": "city_card__default__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.9636, 0.4524, 0.0364, 0.057]
+            }
+          ]
+        }
+      }
+    },
+    "footer_navigation": {
+      "description": "Footer navigation groups with utility links and social channels.",
+      "target": {
+        "module_path": "src/refactored/components/footer_navigation/FooterNavigation.jsx",
+        "style_path": "src/refactored/components/footer_navigation/FooterNavigation.css",
+        "export_name": "FooterNavigation",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Responsive footer link navigation.",
+          "representative_occurrences": {
+            "desktop": "footer_navigation__default__home__desktop__01",
+            "mobile": "footer_navigation__default__home__mobile__01"
+          },
+          "uses": [
+            {
+              "slot": "social_links",
+              "kind": "primitive",
+              "component": "social_link",
+              "variant": "default",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "footer_navigation__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "social_link__default__home__desktop__01",
+                    "social_link__default__home__desktop__02",
+                    "social_link__default__home__desktop__03",
+                    "social_link__default__home__desktop__04",
+                    "social_link__default__home__desktop__05"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "footer_navigation__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "social_link__default__home__mobile__01",
+                    "social_link__default__home__mobile__02",
+                    "social_link__default__home__mobile__03",
+                    "social_link__default__home__mobile__04",
+                    "social_link__default__home__mobile__05"
+                  ]
+                }
+              ]
+            }
+          ],
+          "occurrences": [
+            {
+              "id": "footer_navigation__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.2813, 0.9192, 0.6632, 0.0343]
+            },
+            {
+              "id": "footer_navigation__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.9082, 0.9127, 0.0584]
+            }
+          ]
+        }
+      }
+    },
+    "instruction_step_card": {
+      "description": "Instruction card combining an app usage image, step label and guidance.",
+      "target": {
+        "module_path": "src/refactored/components/instruction_step_card/InstructionStepCard.jsx",
+        "style_path": "src/refactored/components/instruction_step_card/InstructionStepCard.css",
+        "export_name": "InstructionStepCard",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Standard app usage step card.",
+          "representative_occurrences": {
+            "desktop": "instruction_step_card__default__home__desktop__01",
+            "mobile": "instruction_step_card__default__home__mobile__01"
+          },
+          "uses": [],
+          "occurrences": [
+            {
+              "id": "instruction_step_card__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0556, 0.27, 0.2875, 0.068]
+            },
+            {
+              "id": "instruction_step_card__default__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.3563, 0.27, 0.2875, 0.068]
+            },
+            {
+              "id": "instruction_step_card__default__home__desktop__03",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.6569, 0.27, 0.2875, 0.068]
+            },
+            {
+              "id": "instruction_step_card__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.2511, 0.9127, 0.0557]
+            },
+            {
+              "id": "instruction_step_card__default__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.3097, 0.9127, 0.0562]
+            },
+            {
+              "id": "instruction_step_card__default__home__mobile__03",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.3689, 0.9127, 0.0562]
+            }
+          ]
+        }
+      }
+    },
+    "news_card": {
+      "description": "Editorial card with article artwork, headline and publication metadata.",
+      "target": {
+        "module_path": "src/refactored/components/news_card/NewsCard.jsx",
+        "style_path": "src/refactored/components/news_card/NewsCard.css",
+        "export_name": "NewsCard",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Standard news carousel card.",
+          "representative_occurrences": {
+            "desktop": "news_card__default__home__desktop__01",
+            "mobile": "news_card__default__home__mobile__01"
+          },
+          "uses": [],
+          "occurrences": [
+            {
+              "id": "news_card__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0875, 0.6375, 0.2639, 0.0783]
+            },
+            {
+              "id": "news_card__default__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.3681, 0.6375, 0.2639, 0.0783]
+            },
+            {
+              "id": "news_card__default__home__desktop__03",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.6486, 0.6375, 0.2639, 0.0783]
+            },
+            {
+              "id": "news_card__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.6302, 0.9127, 0.0831]
+            },
+            {
+              "id": "news_card__default__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.9709, 0.6303, 0.0291, 0.083]
+            }
+          ]
+        }
+      }
+    },
+    "principle_card": {
+      "description": "Brand principle card with lifestyle photography and a linked topic.",
+      "target": {
+        "module_path": "src/refactored/components/principle_card/PrincipleCard.jsx",
+        "style_path": "src/refactored/components/principle_card/PrincipleCard.css",
+        "export_name": "PrincipleCard",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Standard core principle carousel card.",
+          "representative_occurrences": {
+            "desktop": "principle_card__default__home__desktop__01",
+            "mobile": "principle_card__default__home__mobile__01"
+          },
+          "uses": [],
+          "occurrences": [
+            {
+              "id": "principle_card__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0639, 0.5149, 0.3389, 0.0674]
+            },
+            {
+              "id": "principle_card__default__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.4194, 0.5149, 0.3389, 0.0674]
+            },
+            {
+              "id": "principle_card__default__home__desktop__03",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.775, 0.5149, 0.225, 0.0674]
+            },
+            {
+              "id": "principle_card__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0509, 0.5392, 0.8982, 0.0573]
+            },
+            {
+              "id": "principle_card__default__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.9636, 0.5392, 0.0364, 0.0573]
+            }
+          ]
+        }
+      }
+    },
+    "site_footer": {
+      "description": "Global footer with brand identity, navigation, social links and legal links.",
+      "target": {
+        "module_path": "src/refactored/components/site_footer/SiteFooter.jsx",
+        "style_path": "src/refactored/components/site_footer/SiteFooter.css",
+        "export_name": "SiteFooter",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Responsive global site footer.",
+          "representative_occurrences": {
+            "desktop": "site_footer__default__home__desktop__01",
+            "mobile": "site_footer__default__home__mobile__01"
+          },
+          "uses": [
+            {
+              "slot": "logo",
+              "kind": "primitive",
+              "component": "brand_logo",
+              "variant": "brand",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_footer__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "brand_logo__brand__home__desktop__01"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "site_footer__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "brand_logo__brand__home__mobile__01"
+                  ]
+                }
+              ]
+            },
+            {
+              "slot": "navigation",
+              "kind": "shared_component",
+              "component": "footer_navigation",
+              "variant": "default",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_footer__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "footer_navigation__default__home__desktop__01"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "site_footer__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "footer_navigation__default__home__mobile__01"
+                  ]
+                }
+              ]
+            }
+          ],
+          "occurrences": [
+            {
+              "id": "site_footer__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0, 0.8941, 1, 0.1059]
+            },
+            {
+              "id": "site_footer__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0, 0.8869, 1, 0.1131]
+            }
+          ]
+        }
+      }
+    },
+    "site_header": {
+      "description": "Global header with brand, locale, navigation and primary actions.",
+      "target": {
+        "module_path": "src/refactored/components/site_header/SiteHeader.jsx",
+        "style_path": "src/refactored/components/site_header/SiteHeader.css",
+        "export_name": "SiteHeader",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Transparent responsive header over the page hero.",
+          "representative_occurrences": {
+            "desktop": "site_header__default__home__desktop__01",
+            "mobile": "site_header__default__home__mobile__01"
+          },
+          "uses": [
+            {
+              "slot": "logo",
+              "kind": "primitive",
+              "component": "brand_logo",
+              "variant": "inverse",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_header__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "brand_logo__inverse__home__desktop__01"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "site_header__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "brand_logo__inverse__home__mobile__01"
+                  ]
+                }
+              ]
+            },
+            {
+              "slot": "locale_selector",
+              "kind": "primitive",
+              "component": "language_selector",
+              "variant": "default",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_header__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "language_selector__default__home__desktop__01"
+                  ]
+                },
+                {
+                  "parent_occurrence_id": "site_header__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "language_selector__default__home__mobile__01"
+                  ]
+                }
+              ]
+            },
+            {
+              "slot": "navigation",
+              "kind": "shared_component",
+              "component": "site_navigation",
+              "variant": "default",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_header__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "site_navigation__default__home__desktop__01"
+                  ]
+                }
+              ]
+            },
+            {
+              "slot": "primary_action",
+              "kind": "primitive",
+              "component": "button",
+              "variant": "primary",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_header__default__home__desktop__01",
+                  "child_occurrence_ids": [
+                    "button__primary__home__desktop__01"
+                  ]
+                }
+              ]
+            },
+            {
+              "slot": "menu_control",
+              "kind": "primitive",
+              "component": "menu_toggle",
+              "variant": "default",
+              "bindings": [
+                {
+                  "parent_occurrence_id": "site_header__default__home__mobile__01",
+                  "child_occurrence_ids": [
+                    "menu_toggle__default__home__mobile__01"
+                  ]
+                }
+              ]
+            }
+          ],
+          "occurrences": [
+            {
+              "id": "site_header__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.0556, 0.0049, 0.8889, 0.0074]
+            },
+            {
+              "id": "site_header__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.003, 0.9, 0.0051]
+            }
+          ]
+        }
+      }
+    },
+    "site_navigation": {
+      "description": "Primary navigation links for major site destinations.",
+      "target": {
+        "module_path": "src/refactored/components/site_navigation/SiteNavigation.jsx",
+        "style_path": "src/refactored/components/site_navigation/SiteNavigation.css",
+        "export_name": "SiteNavigation",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Horizontal primary navigation.",
+          "representative_occurrences": {
+            "desktop": "site_navigation__default__home__desktop__01"
+          },
+          "uses": [],
+          "occurrences": [
+            {
+              "id": "site_navigation__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.3979, 0.0069, 0.4153, 0.0032]
+            }
+          ]
+        }
+      }
+    },
+    "vehicle_card": {
+      "description": "Vehicle option card with a product image and vehicle name.",
+      "target": {
+        "module_path": "src/refactored/components/vehicle_card/VehicleCard.jsx",
+        "style_path": "src/refactored/components/vehicle_card/VehicleCard.css",
+        "export_name": "VehicleCard",
+        "export_type": "default"
+      },
+      "variants": {
+        "default": {
+          "description": "Standard vehicle selection card.",
+          "representative_occurrences": {
+            "desktop": "vehicle_card__default__home__desktop__01",
+            "mobile": "vehicle_card__default__home__mobile__01"
+          },
+          "uses": [],
+          "occurrences": [
+            {
+              "id": "vehicle_card__default__home__desktop__01",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.2056, 0.1559, 0.2882, 0.0648]
+            },
+            {
+              "id": "vehicle_card__default__home__desktop__02",
+              "page": "home",
+              "viewport": "desktop",
+              "bbox": [0.5062, 0.1559, 0.2882, 0.0648]
+            },
+            {
+              "id": "vehicle_card__default__home__mobile__01",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.1526, 0.9127, 0.0328]
+            },
+            {
+              "id": "vehicle_card__default__home__mobile__02",
+              "page": "home",
+              "viewport": "mobile",
+              "bbox": [0.0436, 0.1866, 0.9127, 0.0328]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "components": {
+        "app_steps_section": {
+          "type": "section",
+          "description": "Three-step overview explaining how to locate, scan and ride a vehicle.",
+          "target": {
+            "module_path": "src/refactored/pages/home/components/app_steps_section/AppStepsSection.jsx",
+            "style_path": "src/refactored/pages/home/components/app_steps_section/AppStepsSection.css",
+            "export_name": "AppStepsSection",
+            "export_type": "default"
+          },
+          "variants": {
+            "default": {
+              "description": "Responsive app usage steps section.",
+              "representative_occurrences": {
+                "desktop": "app_steps_section__default__home__desktop__01",
+                "mobile": "app_steps_section__default__home__mobile__01"
+              },
+              "uses": [
+                {
+                  "slot": "steps",
+                  "kind": "shared_component",
+                  "component": "instruction_step_card",
+                  "variant": "default",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "app_steps_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "instruction_step_card__default__home__desktop__01",
+                        "instruction_step_card__default__home__desktop__02",
+                        "instruction_step_card__default__home__desktop__03"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "app_steps_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "instruction_step_card__default__home__mobile__01",
+                        "instruction_step_card__default__home__mobile__02",
+                        "instruction_step_card__default__home__mobile__03"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "occurrences": [
+                {
+                  "id": "app_steps_section__default__home__desktop__01",
+                  "page": "home",
+                  "viewport": "desktop",
+                  "bbox": [0, 0.2352, 1, 0.1225]
+                },
+                {
+                  "id": "app_steps_section__default__home__mobile__01",
+                  "page": "home",
+                  "viewport": "mobile",
+                  "bbox": [0, 0.2269, 1, 0.2056]
+                }
+              ]
+            }
+          }
+        },
+        "cities_section": {
+          "type": "section",
+          "description": "City discovery carousel highlighting available U.S. locations.",
+          "target": {
+            "module_path": "src/refactored/pages/home/components/cities_section/CitiesSection.jsx",
+            "style_path": "src/refactored/pages/home/components/cities_section/CitiesSection.css",
+            "export_name": "CitiesSection",
+            "export_type": "default"
+          },
+          "variants": {
+            "default": {
+              "description": "Responsive city carousel section.",
+              "representative_occurrences": {
+                "desktop": "cities_section__default__home__desktop__01",
+                "mobile": "cities_section__default__home__mobile__01"
+              },
+              "uses": [
+                {
+                  "slot": "cities",
+                  "kind": "shared_component",
+                  "component": "city_card",
+                  "variant": "default",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "cities_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "city_card__default__home__desktop__01",
+                        "city_card__default__home__desktop__02",
+                        "city_card__default__home__desktop__03"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "cities_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "city_card__default__home__mobile__01",
+                        "city_card__default__home__mobile__02"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "slot": "pagination",
+                  "kind": "primitive",
+                  "component": "carousel_pagination",
+                  "variant": "extended",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "cities_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "carousel_pagination__extended__home__desktop__01"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "cities_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "carousel_pagination__extended__home__mobile__01"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "occurrences": [
+                {
+                  "id": "cities_section__default__home__desktop__01",
+                  "page": "home",
+                  "viewport": "desktop",
+                  "bbox": [0, 0.3577, 1, 0.1189]
+                },
+                {
+                  "id": "cities_section__default__home__mobile__01",
+                  "page": "home",
+                  "viewport": "mobile",
+                  "bbox": [0, 0.4326, 1, 0.0861]
+                }
+              ]
+            }
+          }
+        },
+        "home_hero": {
+          "type": "section",
+          "description": "Homepage hero introducing Lime mobility with city and app download actions.",
+          "target": {
+            "module_path": "src/refactored/pages/home/components/home_hero/HomeHero.jsx",
+            "style_path": "src/refactored/pages/home/components/home_hero/HomeHero.css",
+            "export_name": "HomeHero",
+            "export_type": "default"
+          },
+          "variants": {
+            "default": {
+              "description": "Full-bleed promotional homepage hero.",
+              "representative_occurrences": {
+                "desktop": "home_hero__default__home__desktop__01",
+                "mobile": "home_hero__default__home__mobile__01"
+              },
+              "uses": [
+                {
+                  "slot": "location_action",
+                  "kind": "primitive",
+                  "component": "button",
+                  "variant": "outline",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "home_hero__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "button__outline__home__desktop__01"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "home_hero__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "button__outline__home__mobile__01"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "slot": "download_action",
+                  "kind": "primitive",
+                  "component": "button",
+                  "variant": "primary",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "home_hero__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "button__primary__home__desktop__02"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "home_hero__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "button__primary__home__mobile__01"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "occurrences": [
+                {
+                  "id": "home_hero__default__home__desktop__01",
+                  "page": "home",
+                  "viewport": "desktop",
+                  "bbox": [0, 0, 1, 0.1214]
+                },
+                {
+                  "id": "home_hero__default__home__mobile__01",
+                  "page": "home",
+                  "viewport": "mobile",
+                  "bbox": [0, 0, 1, 0.1284]
+                }
+              ]
+            }
+          }
+        },
+        "latest_news_section": {
+          "type": "section",
+          "description": "Latest editorial stories presented as a dark themed article carousel.",
+          "target": {
+            "module_path": "src/refactored/pages/home/components/latest_news_section/LatestNewsSection.jsx",
+            "style_path": "src/refactored/pages/home/components/latest_news_section/LatestNewsSection.css",
+            "export_name": "LatestNewsSection",
+            "export_type": "default"
+          },
+          "variants": {
+            "default": {
+              "description": "Responsive latest news section with a follow-up action.",
+              "representative_occurrences": {
+                "desktop": "latest_news_section__default__home__desktop__01",
+                "mobile": "latest_news_section__default__home__mobile__01"
+              },
+              "uses": [
+                {
+                  "slot": "articles",
+                  "kind": "shared_component",
+                  "component": "news_card",
+                  "variant": "default",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "latest_news_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "news_card__default__home__desktop__01",
+                        "news_card__default__home__desktop__02",
+                        "news_card__default__home__desktop__03"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "latest_news_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "news_card__default__home__mobile__01",
+                        "news_card__default__home__mobile__02"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "slot": "more_action",
+                  "kind": "primitive",
+                  "component": "button",
+                  "variant": "primary",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "latest_news_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "button__primary__home__desktop__03"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "latest_news_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "button__primary__home__mobile__02"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "occurrences": [
+                {
+                  "id": "latest_news_section__default__home__desktop__01",
+                  "page": "home",
+                  "viewport": "desktop",
+                  "bbox": [0, 0.6029, 1, 0.1431]
+                },
+                {
+                  "id": "latest_news_section__default__home__mobile__01",
+                  "page": "home",
+                  "viewport": "mobile",
+                  "bbox": [0, 0.6062, 1, 0.1282]
+                }
+              ]
+            }
+          }
+        },
+        "principles_section": {
+          "type": "section",
+          "description": "Carousel presenting Lime safety, sustainability and community principles.",
+          "target": {
+            "module_path": "src/refactored/pages/home/components/principles_section/PrinciplesSection.jsx",
+            "style_path": "src/refactored/pages/home/components/principles_section/PrinciplesSection.css",
+            "export_name": "PrinciplesSection",
+            "export_type": "default"
+          },
+          "variants": {
+            "default": {
+              "description": "Responsive core principles carousel section.",
+              "representative_occurrences": {
+                "desktop": "principles_section__default__home__desktop__01",
+                "mobile": "principles_section__default__home__mobile__01"
+              },
+              "uses": [
+                {
+                  "slot": "principles",
+                  "kind": "shared_component",
+                  "component": "principle_card",
+                  "variant": "default",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "principles_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "principle_card__default__home__desktop__01",
+                        "principle_card__default__home__desktop__02",
+                        "principle_card__default__home__desktop__03"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "principles_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "principle_card__default__home__mobile__01",
+                        "principle_card__default__home__mobile__02"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "slot": "pagination",
+                  "kind": "primitive",
+                  "component": "carousel_pagination",
+                  "variant": "compact",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "principles_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "carousel_pagination__compact__home__desktop__01"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "principles_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "carousel_pagination__compact__home__mobile__01"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "occurrences": [
+                {
+                  "id": "principles_section__default__home__desktop__01",
+                  "page": "home",
+                  "viewport": "desktop",
+                  "bbox": [0, 0.4766, 1, 0.1263]
+                },
+                {
+                  "id": "principles_section__default__home__mobile__01",
+                  "page": "home",
+                  "viewport": "mobile",
+                  "bbox": [0, 0.5187, 1, 0.0875]
+                }
+              ]
+            }
+          }
+        },
+        "vehicles_section": {
+          "type": "section",
+          "description": "Vehicle showcase introducing the current scooter and bike options.",
+          "target": {
+            "module_path": "src/refactored/pages/home/components/vehicles_section/VehiclesSection.jsx",
+            "style_path": "src/refactored/pages/home/components/vehicles_section/VehiclesSection.css",
+            "export_name": "VehiclesSection",
+            "export_type": "default"
+          },
+          "variants": {
+            "default": {
+              "description": "Responsive vehicle discovery section.",
+              "representative_occurrences": {
+                "desktop": "vehicles_section__default__home__desktop__01",
+                "mobile": "vehicles_section__default__home__mobile__01"
+              },
+              "uses": [
+                {
+                  "slot": "vehicles",
+                  "kind": "shared_component",
+                  "component": "vehicle_card",
+                  "variant": "default",
+                  "bindings": [
+                    {
+                      "parent_occurrence_id": "vehicles_section__default__home__desktop__01",
+                      "child_occurrence_ids": [
+                        "vehicle_card__default__home__desktop__01",
+                        "vehicle_card__default__home__desktop__02"
+                      ]
+                    },
+                    {
+                      "parent_occurrence_id": "vehicles_section__default__home__mobile__01",
+                      "child_occurrence_ids": [
+                        "vehicle_card__default__home__mobile__01",
+                        "vehicle_card__default__home__mobile__02"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "occurrences": [
+                {
+                  "id": "vehicles_section__default__home__desktop__01",
+                  "page": "home",
+                  "viewport": "desktop",
+                  "bbox": [0, 0.1214, 1, 0.1139]
+                },
+                {
+                  "id": "vehicles_section__default__home__mobile__01",
+                  "page": "home",
+                  "viewport": "mobile",
+                  "bbox": [0, 0.1284, 1, 0.0985]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "composition": {
+        "desktop": [
+          {
+            "kind": "shared_component",
+            "component": "site_header",
+            "variant": "default",
+            "occurrence_id": "site_header__default__home__desktop__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "home_hero",
+            "variant": "default",
+            "occurrence_id": "home_hero__default__home__desktop__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "vehicles_section",
+            "variant": "default",
+            "occurrence_id": "vehicles_section__default__home__desktop__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "app_steps_section",
+            "variant": "default",
+            "occurrence_id": "app_steps_section__default__home__desktop__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "cities_section",
+            "variant": "default",
+            "occurrence_id": "cities_section__default__home__desktop__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "principles_section",
+            "variant": "default",
+            "occurrence_id": "principles_section__default__home__desktop__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "latest_news_section",
+            "variant": "default",
+            "occurrence_id": "latest_news_section__default__home__desktop__01"
+          },
+          {
+            "kind": "shared_component",
+            "component": "app_download_banner",
+            "variant": "default",
+            "occurrence_id": "app_download_banner__default__home__desktop__01"
+          },
+          {
+            "kind": "shared_component",
+            "component": "site_footer",
+            "variant": "default",
+            "occurrence_id": "site_footer__default__home__desktop__01"
+          }
+        ],
+        "mobile": [
+          {
+            "kind": "shared_component",
+            "component": "site_header",
+            "variant": "default",
+            "occurrence_id": "site_header__default__home__mobile__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "home_hero",
+            "variant": "default",
+            "occurrence_id": "home_hero__default__home__mobile__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "vehicles_section",
+            "variant": "default",
+            "occurrence_id": "vehicles_section__default__home__mobile__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "app_steps_section",
+            "variant": "default",
+            "occurrence_id": "app_steps_section__default__home__mobile__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "cities_section",
+            "variant": "default",
+            "occurrence_id": "cities_section__default__home__mobile__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "principles_section",
+            "variant": "default",
+            "occurrence_id": "principles_section__default__home__mobile__01"
+          },
+          {
+            "kind": "page_component",
+            "component": "latest_news_section",
+            "variant": "default",
+            "occurrence_id": "latest_news_section__default__home__mobile__01"
+          },
+          {
+            "kind": "shared_component",
+            "component": "app_download_banner",
+            "variant": "default",
+            "occurrence_id": "app_download_banner__default__home__mobile__01"
+          },
+          {
+            "kind": "shared_component",
+            "component": "site_footer",
+            "variant": "default",
+            "occurrence_id": "site_footer__default__home__mobile__01"
+          }
+        ]
+      }
+    }
+  },
+  "build_order": [
+    {
+      "kind": "primitive",
+      "component": "app_store_badge"
+    },
+    {
+      "kind": "primitive",
+      "component": "brand_logo"
+    },
+    {
+      "kind": "primitive",
+      "component": "button"
+    },
+    {
+      "kind": "primitive",
+      "component": "carousel_pagination"
+    },
+    {
+      "kind": "primitive",
+      "component": "language_selector"
+    },
+    {
+      "kind": "primitive",
+      "component": "menu_toggle"
+    },
+    {
+      "kind": "primitive",
+      "component": "social_link"
+    },
+    {
+      "kind": "shared_component",
+      "component": "app_download_banner"
+    },
+    {
+      "kind": "shared_component",
+      "component": "city_card"
+    },
+    {
+      "kind": "shared_component",
+      "component": "footer_navigation"
+    },
+    {
+      "kind": "shared_component",
+      "component": "instruction_step_card"
+    },
+    {
+      "kind": "shared_component",
+      "component": "news_card"
+    },
+    {
+      "kind": "shared_component",
+      "component": "principle_card"
+    },
+    {
+      "kind": "shared_component",
+      "component": "site_footer"
+    },
+    {
+      "kind": "shared_component",
+      "component": "site_navigation"
+    },
+    {
+      "kind": "shared_component",
+      "component": "site_header"
+    },
+    {
+      "kind": "shared_component",
+      "component": "vehicle_card"
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "app_steps_section"
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "cities_section"
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "home_hero"
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "latest_news_section"
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "principles_section"
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "vehicles_section"
+    }
+  ]
+}

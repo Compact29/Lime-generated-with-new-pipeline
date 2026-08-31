@@ -1,0 +1,90 @@
+/* Full-bleed light grey tutorial background; width limiting and gutters belong
+   to the inner container. */
+.app-steps-section {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-block: 80px 128px;
+  background-color: rgb(238, 238, 238);
+  color: rgb(0, 0, 0);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+}
+
+.app-steps-section .app-steps-section__container {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+}
+
+.app-steps-section .app-steps-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.app-steps-section .app-steps-section__eyebrow {
+  margin: 0;
+  color: rgb(0, 178, 0);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.app-steps-section .app-steps-section__heading {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 56px;
+}
+
+/* Three equal-height cards in a row on wide. */
+.app-steps-section .app-steps-section__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 64px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-steps-section .app-steps-section__item {
+  display: flex;
+  min-width: 0;
+}
+
+@media (max-width: 1120px) {
+  .app-steps-section {
+    padding-block: 78px 56px;
+  }
+
+  .app-steps-section .app-steps-section__container {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+  }
+
+  .app-steps-section .app-steps-section__eyebrow {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .app-steps-section .app-steps-section__heading {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 42px;
+  }
+
+  /* Single column with natural card height on narrow. */
+  .app-steps-section .app-steps-section__list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 40px;
+  }
+
+  .app-steps-section .app-steps-section__item {
+    height: auto;
+  }
+}

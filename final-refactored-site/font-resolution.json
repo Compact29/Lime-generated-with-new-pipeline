@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "required": [
+    {
+      "family": "Poppins",
+      "weight": 400,
+      "italic": false
+    },
+    {
+      "family": "Poppins",
+      "weight": 700,
+      "italic": false
+    }
+  ],
+  "resolved": [
+    {
+      "family": "Poppins",
+      "weight": 400,
+      "italic": false,
+      "source": "local",
+      "fileName": "Poppins-400.ttf",
+      "path": "/generated-fonts/Poppins-400.ttf"
+    },
+    {
+      "family": "Poppins",
+      "weight": 700,
+      "italic": false,
+      "source": "local",
+      "fileName": "Poppins-700.ttf",
+      "path": "/generated-fonts/Poppins-700.ttf"
+    }
+  ],
+  "unresolved": [],
+  "error": "",
+  "updatedAt": "2026-08-12T17:51:16Z"
+}

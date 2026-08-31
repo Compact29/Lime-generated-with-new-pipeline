@@ -1,0 +1,5 @@
+:root {
+  --site-content-max: 1280px;
+  --site-gutter-wide: 32px;
+  --site-gutter-narrow: 24px;
+}

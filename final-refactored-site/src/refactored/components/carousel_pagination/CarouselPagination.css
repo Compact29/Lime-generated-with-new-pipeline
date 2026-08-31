@@ -1,0 +1,28 @@
+.carousel-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
+}
+
+.carousel-pagination .carousel-pagination__dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(217, 217, 217);
+  cursor: pointer;
+}
+
+.carousel-pagination .carousel-pagination__dot--active {
+  background: rgb(0, 178, 0);
+}
+
+.carousel-pagination .carousel-pagination__dot:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}

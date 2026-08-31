@@ -1,0 +1,129 @@
+/* Full-bleed white section. It also owns the carousel clipping: the track
+   overflows its container to the right and must never reach the page. */
+.principles-section {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-block: 80px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Inner container: site content cap plus the shared wide gutter. */
+.principles-section .principles-section__container {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+}
+
+.principles-section .principles-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.principles-section .principles-section__eyebrow {
+  margin: 0;
+  color: rgb(0, 178, 0);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.principles-section .principles-section__heading {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 56px;
+}
+
+/* Carousel track: starts at the container line, keeps a fixed slide step and
+   deliberately runs past the container edge. */
+.principles-section .principles-section__track {
+  display: flex;
+  align-items: flex-start;
+  margin: 64px 0 0;
+  padding: 0;
+  list-style: none;
+  transform: translateX(0);
+  transition: transform 300ms ease;
+}
+
+/* One slide step equals one item width, so the offsets stay proportional. */
+.principles-section .principles-section__track[data-active-slide="1"] {
+  transform: translateX(-40%);
+}
+
+.principles-section .principles-section__track[data-active-slide="2"] {
+  transform: translateX(-80%);
+}
+
+/* 40% of the container per slide; the inline padding forms the gutter between
+   two neighbouring card images. */
+.principles-section .principles-section__item {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 40%;
+  min-width: 0;
+  padding-inline: 12px;
+}
+
+.principles-section .principles-section__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+}
+
+@media (max-width: 1120px) {
+  .principles-section {
+    padding-block: 45px 48px;
+  }
+
+  .principles-section .principles-section__container {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+  }
+
+  .principles-section .principles-section__header {
+    gap: 2px;
+  }
+
+  .principles-section .principles-section__eyebrow {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .principles-section .principles-section__heading {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 42px;
+  }
+
+  .principles-section .principles-section__track {
+    margin-top: 40px;
+  }
+
+  .principles-section .principles-section__track[data-active-slide="1"] {
+    transform: translateX(-100%);
+  }
+
+  .principles-section .principles-section__track[data-active-slide="2"] {
+    transform: translateX(-200%);
+  }
+
+  /* One nearly full card per viewport, the next one stays a visible edge. */
+  .principles-section .principles-section__item {
+    flex: 0 0 100%;
+    padding-inline: 4px;
+  }
+
+  .principles-section .principles-section__pagination {
+    margin-top: 34px;
+  }
+}

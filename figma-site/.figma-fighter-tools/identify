@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Report common image dimensions without requiring ImageMagick."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import re
+import struct
+import sys
+
+
+def image_info(path: Path) -> tuple[str, int, int]:
+    data = path.read_bytes()
+    if data.startswith(b"\x89PNG\r\n\x1a\n") and len(data) >= 24:
+        width, height = struct.unpack(">II", data[16:24])
+        return "PNG", width, height
+    if data[:6] in (b"GIF87a", b"GIF89a") and len(data) >= 10:
+        width, height = struct.unpack("<HH", data[6:10])
+        return "GIF", width, height
+    if data.startswith(b"\xff\xd8"):
+        offset = 2
+        while offset + 9 < len(data):
+            if data[offset] != 0xFF:
+                offset += 1
+                continue
+            marker = data[offset + 1]
+            offset += 2
+            if marker in {0xD8, 0xD9}:
+                continue
+            if offset + 2 > len(data):
+                break
+            length = struct.unpack(">H", data[offset:offset + 2])[0]
+            if marker in {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}:
+                height, width = struct.unpack(">HH", data[offset + 3:offset + 7])
+                return "JPEG", width, height
+            offset += max(2, length)
+    if data.startswith(b"RIFF") and data[8:12] == b"WEBP" and len(data) >= 30:
+        kind = data[12:16]
+        if kind == b"VP8X":
+            width = 1 + int.from_bytes(data[24:27], "little")
+            height = 1 + int.from_bytes(data[27:30], "little")
+            return "WEBP", width, height
+    if path.suffix.lower() == ".svg":
+        text = data[:65536].decode("utf-8", errors="ignore")
+        width_match = re.search(r'\bwidth=["\']([0-9.]+)', text)
+        height_match = re.search(r'\bheight=["\']([0-9.]+)', text)
+        if width_match and height_match:
+            return "SVG", round(float(width_match.group(1))), round(float(height_match.group(1)))
+        view_box = re.search(r'\bviewBox=["\'][^"\']*?([0-9.]+)\s+([0-9.]+)["\']', text)
+        if view_box:
+            return "SVG", round(float(view_box.group(1))), round(float(view_box.group(2)))
+    raise ValueError("unsupported image format")
+
+
+def main(argv: list[str]) -> int:
+    format_string = ""
+    paths: list[str] = []
+    index = 0
+    while index < len(argv):
+        if argv[index] == "-format" and index + 1 < len(argv):
+            index += 1
+            format_string = argv[index]
+        elif not argv[index].startswith("-"):
+            paths.append(argv[index])
+        index += 1
+    if not paths:
+        print("identify: missing image path", file=sys.stderr)
+        return 2
+    failed = False
+    for raw_path in paths:
+        path = Path(raw_path)
+        try:
+            image_format, width, height = image_info(path)
+        except (OSError, ValueError) as error:
+            print(f"identify: {raw_path}: {error}", file=sys.stderr)
+            failed = True
+            continue
+        if format_string:
+            formatted = format_string.replace("%w", str(width)).replace("%h", str(height)).replace("%m", image_format)
+            print(formatted.replace("\\n", "\n"), end="")
+        else:
+            print(f"{raw_path} {image_format} {width}x{height}")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))

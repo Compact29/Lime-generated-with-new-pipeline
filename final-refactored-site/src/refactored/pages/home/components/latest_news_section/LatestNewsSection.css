@@ -1,0 +1,128 @@
+/* Full-bleed dark news background; width limiting and horizontal gutters belong
+   to the inner container and to the carousel track padding. */
+.latest-news-section {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-block: 80px 56px;
+  overflow-x: clip;
+  background-color: rgb(30, 30, 30);
+  color: rgb(255, 255, 255);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+}
+
+.latest-news-section .latest-news-section__container {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+}
+
+.latest-news-section .latest-news-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.latest-news-section .latest-news-section__eyebrow {
+  margin: 0;
+  color: rgb(0, 178, 0);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.latest-news-section .latest-news-section__heading {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 56px;
+}
+
+/* Carousel viewport spans the whole section and clips the track, so the track
+   may continue past the container line without page-level overflow. */
+.latest-news-section .latest-news-section__viewport {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 64px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(
+    var(--site-gutter-wide, 32px),
+    calc((100% - var(--site-content-max, 1280px)) / 2)
+  );
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.latest-news-section .latest-news-section__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+/* The track starts at the container/gutter line and keeps going to the right. */
+.latest-news-section .latest-news-section__track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-inline: max(
+    var(--site-gutter-wide, 32px),
+    calc((100% - var(--site-content-max, 1280px)) / 2)
+  );
+  gap: 24px;
+  list-style: none;
+}
+
+/* Three cards fill the container width on wide; any further card is clipped. */
+.latest-news-section .latest-news-section__item {
+  display: flex;
+  min-width: 0;
+  flex: 0 0 calc((100% - 2 * 24px) / 3);
+  scroll-snap-align: start;
+}
+
+.latest-news-section .latest-news-section__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+@media (max-width: 1120px) {
+  .latest-news-section {
+    padding-block: 77px 56px;
+  }
+
+  .latest-news-section .latest-news-section__container {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+  }
+
+  .latest-news-section .latest-news-section__eyebrow {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .latest-news-section .latest-news-section__heading {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 42px;
+  }
+
+  .latest-news-section .latest-news-section__viewport {
+    margin-top: 40px;
+    scroll-padding-inline: var(--site-gutter-narrow, 24px);
+  }
+
+  .latest-news-section .latest-news-section__track {
+    padding-inline: var(--site-gutter-narrow, 24px);
+    gap: 8px;
+  }
+
+  /* One nearly full card plus the visible edge of the next one. */
+  .latest-news-section .latest-news-section__item {
+    flex-basis: 100%;
+  }
+}

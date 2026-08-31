@@ -1,0 +1,103 @@
+/* Global site header.
+   The header is a transparent overlay layer that sits above the page hero.
+   Its own fixed layer owns the overlay; nothing here is anchored to page or
+   screenshot coordinates, and the component never assumes which section
+   follows it in the page composition. */
+.site-header {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+}
+
+/* Content container: site gutters plus the shared content maximum. */
+.site-header .site-header__inner {
+  box-sizing: border-box;
+  display: flex;
+  width: calc(100% - 2 * var(--site-gutter-wide, 32px));
+  max-width: var(--site-content-max, 1280px);
+  margin-inline: auto;
+  align-items: center;
+  gap: 36px;
+}
+
+/* Top row: brand, locale control and (narrow only) the menu toggle.
+   It carries the stable header bar height in both responsive modes. */
+.site-header .site-header__bar {
+  display: flex;
+  min-height: 112px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.site-header .site-header__logo,
+.site-header .site-header__locale {
+  flex: 0 0 auto;
+}
+
+.site-header .site-header__menu-toggle {
+  display: none;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.site-header .site-header__navigation {
+  flex: 0 1 auto;
+  margin-left: auto;
+}
+
+.site-header .site-header__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+@media (max-width: 1120px) {
+  .site-header .site-header__inner {
+    width: calc(100% - 2 * var(--site-gutter-narrow, 24px));
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .site-header .site-header__bar {
+    width: 100%;
+    min-height: 84px;
+    gap: 16px;
+  }
+
+  .site-header .site-header__menu-toggle {
+    display: inline-flex;
+  }
+
+  /* Links and the header CTA collapse into the hamburger-triggered panel that
+     wraps onto its own rows below the bar. */
+  .site-header .site-header__navigation {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .site-header .site-header__actions {
+    display: none;
+    width: 100%;
+  }
+
+  .site-header--menu-open {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .site-header--menu-open .site-header__inner {
+    max-height: 100vh;
+    padding-bottom: 24px;
+    overflow-y: auto;
+  }
+
+  .site-header--menu-open .site-header__actions {
+    display: flex;
+  }
+}

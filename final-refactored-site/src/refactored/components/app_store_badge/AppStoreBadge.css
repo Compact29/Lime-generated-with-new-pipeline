@@ -1,0 +1,46 @@
+.app-store-badge {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 149.58px;
+  height: 50px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.app-store-badge.app-store-badge--google {
+  width: 170.06px;
+}
+
+.app-store-badge .app-store-badge__picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-store-badge .app-store-badge__artwork {
+  display: block;
+  width: 521.67px;
+  max-width: none;
+  height: 75px;
+  margin-top: -12.5px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.app-store-badge.app-store-badge--google .app-store-badge__artwork {
+  margin-left: -165.64px;
+}
+
+.app-store-badge:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1120px) {
+  .app-store-badge .app-store-badge__artwork {
+    width: 502px;
+  }
+}

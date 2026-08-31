@@ -1,0 +1,22 @@
+{
+  "rootId": "2001:2993",
+  "rootName": "www.li.me - 30/01/2024, 16:06:01 GMT+1",
+  "inputJson": "/home/edem2/proga/andrew_robust_variant/figma_fighter/figma_builder_app/studio-data/jobs/20260812-174847-figma-site-6b37e22e/figma/pages/page-1/desktop/figma-node-tree.objects-full.json",
+  "mobileJson": "/home/edem2/proga/andrew_robust_variant/figma_fighter/figma_builder_app/studio-data/jobs/20260812-174847-figma-site-6b37e22e/figma/pages/page-1/mobile/figma-node-tree.objects-full.json",
+  "imageDir": "/home/edem2/proga/andrew_robust_variant/figma_fighter/figma_builder_app/studio-data/jobs/20260812-174847-figma-site-6b37e22e/figma/pages/page-1/desktop/images",
+  "responsiveBreakpointPx": 820,
+  "responsive": {
+    "enabled": true,
+    "breakpointPx": 820,
+    "matchedNodes": 186,
+    "desktopOnlySubtrees": 30,
+    "mobileOnlySubtrees": 8
+  },
+  "namedImageMatchCount": 41,
+  "fontDir": null,
+  "localFontAssetCount": 2,
+  "llmFallbackEnabled": false,
+  "llmModel": null,
+  "ruleBased": true,
+  "ruleFamilyCount": 48
+}

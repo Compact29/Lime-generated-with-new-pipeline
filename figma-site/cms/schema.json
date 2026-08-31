@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "collections": {},
+  "forms": {
+    "contact_requests": {
+      "label": "Contact requests",
+      "description": "Agent-managed inbox for frontend feedback/contact forms.",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email"
+        },
+        {
+          "name": "message",
+          "label": "Message",
+          "type": "textarea"
+        },
+        {
+          "name": "source",
+          "label": "Source",
+          "type": "text"
+        }
+      ]
+    }
+  }
+}

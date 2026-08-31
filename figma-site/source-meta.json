@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-08-12T17:51:15.914Z",
+  "generator": "Figma Fighter Builder",
+  "responsiveBreakpoint": 820,
+  "pages": [
+    {
+      "name": "Home",
+      "key": "page-1",
+      "componentDirName": "Home",
+      "slug": "page-1",
+      "routePath": "/page-1",
+      "desktopUrl": "https://www.figma.com/design/j9WTKZi6VzgY1JVCkHNMoZ/Landing-page-examples--Community-?node-id=2001-2993&t=ejOw4IGl7edKkfH4-0",
+      "mobileUrl": "https://www.figma.com/design/j9WTKZi6VzgY1JVCkHNMoZ/Landing-page-examples--Community-?node-id=2001-3224&t=ejOw4IGl7edKkfH4-0"
+    }
+  ]
+}

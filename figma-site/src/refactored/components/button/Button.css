@@ -1,0 +1,60 @@
+.refactored-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  appearance: none;
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.refactored-button.refactored-button--primary {
+  border-color: rgb(0, 221, 0);
+  background-color: rgb(0, 221, 0);
+  color: rgb(0, 0, 0);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.refactored-button.refactored-button--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+.refactored-button.refactored-button--outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+
+.refactored-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1120px) {
+  .refactored-button {
+    min-height: 41px;
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .refactored-button.refactored-button--primary {
+    transition: none;
+  }
+
+  .refactored-button.refactored-button--primary:hover {
+    transform: none;
+  }
+}

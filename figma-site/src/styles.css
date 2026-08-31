@@ -1,0 +1,26 @@
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  background: #ffffff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.empty-generated-page,
+.ff-page-shell {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: clip;
+  background: #ffffff;
+}

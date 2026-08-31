@@ -1,0 +1,114 @@
+.home-hero {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+/* Full-bleed hero media wrapper: owns the stable visual area and the local
+   overlay containing block for the scrim and the hero copy. */
+.home-hero .home-hero__media {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 1440 / 792;
+  max-height: 792px;
+  overflow: hidden;
+  background-color: rgb(147, 146, 146);
+}
+
+.home-hero .home-hero__picture {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+}
+
+.home-hero .home-hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Darkening scrim over the upper part of the hero media. */
+.home-hero .home-hero__media::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 auto;
+  height: 81%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.75) 0%,
+    rgba(26, 26, 26, 0) 100%
+  );
+  pointer-events: none;
+}
+
+/* Local overlay layer; fr rows keep the copy proportionally placed inside the
+   media area instead of relying on page coordinates. */
+.home-hero .home-hero__layer {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  grid-template-rows: 63fr auto 37fr;
+  justify-items: center;
+  padding-inline: var(--site-gutter-wide, 32px);
+}
+
+.home-hero .home-hero__content {
+  display: flex;
+  width: 100%;
+  max-width: var(--site-content-max, 1280px);
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2;
+  gap: 24px;
+  text-align: center;
+}
+
+.home-hero .home-hero__heading {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: Poppins, Poppins-Regular, Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.home-hero .home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 1120px) {
+  .home-hero .home-hero__media {
+    aspect-ratio: 550 / 978;
+    max-height: 978px;
+  }
+
+  .home-hero .home-hero__media::before {
+    height: 39%;
+  }
+
+  .home-hero .home-hero__layer {
+    grid-template-rows: 23fr auto 77fr;
+    padding-inline: var(--site-gutter-narrow, 24px);
+  }
+
+  .home-hero .home-hero__content {
+    gap: 32px;
+  }
+
+  .home-hero .home-hero__heading {
+    font-size: 30px;
+  }
+}

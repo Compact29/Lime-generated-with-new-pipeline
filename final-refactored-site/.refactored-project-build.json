@@ -1,0 +1,288 @@
+{
+  "generator": "assemble_refactored_project.mjs",
+  "status": "complete",
+  "manifest": "/home/edem2/proga/andrew_robust_variant/zzz_screenshots/component-manifest.json",
+  "contract": "/home/edem2/proga/andrew_robust_variant/zzz_screenshots/SITE_REFACTORING_CONTRACT.md",
+  "source_project": "/home/edem2/proga/andrew_robust_variant/zzz_screenshots/figma-site",
+  "artifacts_root": "/home/edem2/proga/andrew_robust_variant/zzz_screenshots/figma-site",
+  "output_directory": "/home/edem2/proga/andrew_robust_variant/zzz_screenshots/final-refactored-site",
+  "refactored_root": "src/refactored",
+  "component_count": 23,
+  "target_file_count": 46,
+  "page_count": 1,
+  "skeleton_file_count": 213,
+  "generated_files": [
+    "src/App.jsx",
+    "src/refactored/pages.js",
+    "src/refactored/site.css",
+    "src/refactored/pages/home/HomePage.jsx",
+    "src/refactored/pages/home/HomePage.css"
+  ],
+  "excluded_runtime_tree": "src/generated",
+  "routes": [
+    {
+      "pageId": "home",
+      "name": "Lime Home",
+      "routePath": "/",
+      "explicit": true
+    }
+  ],
+  "site_css": {
+    "definitions": [
+      "--site-content-max",
+      "--site-gutter-narrow",
+      "--site-gutter-wide"
+    ],
+    "references": [
+      "--site-content-max",
+      "--site-gutter-narrow",
+      "--site-gutter-wide"
+    ]
+  },
+  "pages": [
+    {
+      "pageId": "home",
+      "exportName": "HomePage",
+      "modulePath": "src/refactored/pages/home/HomePage.jsx",
+      "stylePath": "src/refactored/pages/home/HomePage.css",
+      "compositionViewport": "desktop"
+    }
+  ],
+  "components": [
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "app_store_badge",
+      "module_path": "src/refactored/components/app_store_badge/AppStoreBadge.jsx",
+      "style_path": "src/refactored/components/app_store_badge/AppStoreBadge.css",
+      "export_name": "AppStoreBadge",
+      "dependencies": []
+    },
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "brand_logo",
+      "module_path": "src/refactored/components/brand_logo/BrandLogo.jsx",
+      "style_path": "src/refactored/components/brand_logo/BrandLogo.css",
+      "export_name": "BrandLogo",
+      "dependencies": []
+    },
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "button",
+      "module_path": "src/refactored/components/button/Button.jsx",
+      "style_path": "src/refactored/components/button/Button.css",
+      "export_name": "Button",
+      "dependencies": []
+    },
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "carousel_pagination",
+      "module_path": "src/refactored/components/carousel_pagination/CarouselPagination.jsx",
+      "style_path": "src/refactored/components/carousel_pagination/CarouselPagination.css",
+      "export_name": "CarouselPagination",
+      "dependencies": []
+    },
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "language_selector",
+      "module_path": "src/refactored/components/language_selector/LanguageSelector.jsx",
+      "style_path": "src/refactored/components/language_selector/LanguageSelector.css",
+      "export_name": "LanguageSelector",
+      "dependencies": []
+    },
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "menu_toggle",
+      "module_path": "src/refactored/components/menu_toggle/MenuToggle.jsx",
+      "style_path": "src/refactored/components/menu_toggle/MenuToggle.css",
+      "export_name": "MenuToggle",
+      "dependencies": []
+    },
+    {
+      "kind": "primitive",
+      "page": null,
+      "component": "social_link",
+      "module_path": "src/refactored/components/social_link/SocialLink.jsx",
+      "style_path": "src/refactored/components/social_link/SocialLink.css",
+      "export_name": "SocialLink",
+      "dependencies": []
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "app_download_banner",
+      "module_path": "src/refactored/components/app_download_banner/AppDownloadBanner.jsx",
+      "style_path": "src/refactored/components/app_download_banner/AppDownloadBanner.css",
+      "export_name": "AppDownloadBanner",
+      "dependencies": [
+        "src/refactored/components/app_store_badge/AppStoreBadge.jsx"
+      ]
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "city_card",
+      "module_path": "src/refactored/components/city_card/CityCard.jsx",
+      "style_path": "src/refactored/components/city_card/CityCard.css",
+      "export_name": "CityCard",
+      "dependencies": []
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "footer_navigation",
+      "module_path": "src/refactored/components/footer_navigation/FooterNavigation.jsx",
+      "style_path": "src/refactored/components/footer_navigation/FooterNavigation.css",
+      "export_name": "FooterNavigation",
+      "dependencies": [
+        "src/refactored/components/social_link/SocialLink.jsx"
+      ]
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "instruction_step_card",
+      "module_path": "src/refactored/components/instruction_step_card/InstructionStepCard.jsx",
+      "style_path": "src/refactored/components/instruction_step_card/InstructionStepCard.css",
+      "export_name": "InstructionStepCard",
+      "dependencies": []
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "news_card",
+      "module_path": "src/refactored/components/news_card/NewsCard.jsx",
+      "style_path": "src/refactored/components/news_card/NewsCard.css",
+      "export_name": "NewsCard",
+      "dependencies": []
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "principle_card",
+      "module_path": "src/refactored/components/principle_card/PrincipleCard.jsx",
+      "style_path": "src/refactored/components/principle_card/PrincipleCard.css",
+      "export_name": "PrincipleCard",
+      "dependencies": []
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "site_footer",
+      "module_path": "src/refactored/components/site_footer/SiteFooter.jsx",
+      "style_path": "src/refactored/components/site_footer/SiteFooter.css",
+      "export_name": "SiteFooter",
+      "dependencies": [
+        "src/refactored/components/brand_logo/BrandLogo.jsx",
+        "src/refactored/components/footer_navigation/FooterNavigation.jsx"
+      ]
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "site_navigation",
+      "module_path": "src/refactored/components/site_navigation/SiteNavigation.jsx",
+      "style_path": "src/refactored/components/site_navigation/SiteNavigation.css",
+      "export_name": "SiteNavigation",
+      "dependencies": []
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "site_header",
+      "module_path": "src/refactored/components/site_header/SiteHeader.jsx",
+      "style_path": "src/refactored/components/site_header/SiteHeader.css",
+      "export_name": "SiteHeader",
+      "dependencies": [
+        "src/refactored/components/brand_logo/BrandLogo.jsx",
+        "src/refactored/components/language_selector/LanguageSelector.jsx",
+        "src/refactored/components/site_navigation/SiteNavigation.jsx",
+        "src/refactored/components/button/Button.jsx",
+        "src/refactored/components/menu_toggle/MenuToggle.jsx"
+      ]
+    },
+    {
+      "kind": "shared_component",
+      "page": null,
+      "component": "vehicle_card",
+      "module_path": "src/refactored/components/vehicle_card/VehicleCard.jsx",
+      "style_path": "src/refactored/components/vehicle_card/VehicleCard.css",
+      "export_name": "VehicleCard",
+      "dependencies": []
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "app_steps_section",
+      "module_path": "src/refactored/pages/home/components/app_steps_section/AppStepsSection.jsx",
+      "style_path": "src/refactored/pages/home/components/app_steps_section/AppStepsSection.css",
+      "export_name": "AppStepsSection",
+      "dependencies": [
+        "src/refactored/components/instruction_step_card/InstructionStepCard.jsx"
+      ]
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "cities_section",
+      "module_path": "src/refactored/pages/home/components/cities_section/CitiesSection.jsx",
+      "style_path": "src/refactored/pages/home/components/cities_section/CitiesSection.css",
+      "export_name": "CitiesSection",
+      "dependencies": [
+        "src/refactored/components/city_card/CityCard.jsx",
+        "src/refactored/components/carousel_pagination/CarouselPagination.jsx"
+      ]
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "home_hero",
+      "module_path": "src/refactored/pages/home/components/home_hero/HomeHero.jsx",
+      "style_path": "src/refactored/pages/home/components/home_hero/HomeHero.css",
+      "export_name": "HomeHero",
+      "dependencies": [
+        "src/refactored/components/button/Button.jsx"
+      ]
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "latest_news_section",
+      "module_path": "src/refactored/pages/home/components/latest_news_section/LatestNewsSection.jsx",
+      "style_path": "src/refactored/pages/home/components/latest_news_section/LatestNewsSection.css",
+      "export_name": "LatestNewsSection",
+      "dependencies": [
+        "src/refactored/components/news_card/NewsCard.jsx",
+        "src/refactored/components/button/Button.jsx"
+      ]
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "principles_section",
+      "module_path": "src/refactored/pages/home/components/principles_section/PrinciplesSection.jsx",
+      "style_path": "src/refactored/pages/home/components/principles_section/PrinciplesSection.css",
+      "export_name": "PrinciplesSection",
+      "dependencies": [
+        "src/refactored/components/principle_card/PrincipleCard.jsx",
+        "src/refactored/components/carousel_pagination/CarouselPagination.jsx"
+      ]
+    },
+    {
+      "kind": "page_component",
+      "page": "home",
+      "component": "vehicles_section",
+      "module_path": "src/refactored/pages/home/components/vehicles_section/VehiclesSection.jsx",
+      "style_path": "src/refactored/pages/home/components/vehicles_section/VehiclesSection.css",
+      "export_name": "VehiclesSection",
+      "dependencies": [
+        "src/refactored/components/vehicle_card/VehicleCard.jsx"
+      ]
+    }
+  ]
+}
